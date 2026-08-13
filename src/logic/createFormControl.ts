@@ -738,8 +738,7 @@ export function createFormControl<
 
         if (_f) {
           const isFieldArrayRoot = _names.array.has(_f.name);
-          const isPromiseFunction =
-            field._f && hasPromiseValidation((field as Field)._f);
+          const isPromiseFunction = hasPromiseValidation(_f);
           const shouldTrackIsValidatingState =
             _proxyFormState.validatingFields ||
             _proxyFormState.isValidating ||
